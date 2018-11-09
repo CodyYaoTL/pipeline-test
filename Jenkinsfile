@@ -3,8 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                'echo hello world'
+                echo 'hello world'
             }
         }
+    }
+    post {
+    	always {
+    		echo 'Completed Deployment'
+    	}
     }
 }
